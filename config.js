@@ -1,38 +1,32 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
+  url: 'https://www.lucasdellabella.com',
+  title: 'Thoughts, Lucas Della Bella',
+  subtitle: 'lucas della bella\'s thoughts / blog posts / learnings',
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
   menu: [
     {
-      label: 'Articles',
+      label: 'Thoughts',
       path: '/'
     },
     {
       label: 'About me',
       path: '/pages/about'
     },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
-    }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Lucas Della Bella',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: '???',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      github: 'lucasdellabella',
+      youtube: 'channel/UCRWhLAnoDR7H-bK874mf_dA',
+      linkedin: 'lucasdellabella',
+      twitter: 'lucasdellabella',
+      email: 'dellabella.lucas+blog@gmail.com',
     }
   }
 };
