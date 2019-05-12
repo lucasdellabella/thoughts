@@ -27,16 +27,6 @@
 @include breakpoint-md {
   .page {
     &__inner {
-      padding: 30px 20px;
-    }
-
-  }
-
-}
-
-@include breakpoint-lg {
-  .page {
-    &__inner {
       padding: 40px 35px;
     }
 

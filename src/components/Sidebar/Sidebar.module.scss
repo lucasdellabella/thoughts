@@ -12,10 +12,28 @@
     }
 }
 
+@media screen and (max-width: 959px) {
+    .sidebar {
+        &__inner {
+            &:after {
+                background: $color-gray-border;
+                background: linear-gradient(to right, $color-white 0%, $color-gray-border 40%, $color-gray-border 60%, $color-white 100%);
+                position: absolute;
+                content: '';
+                width: 75%;
+                height: 1px;
+                left: 12.5%;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
 @include breakpoint-md {
     .sidebar {
         &__inner {
-            padding: 30px 20px 0;
+            padding: 40px;
             &:after {
                 background: $color-gray-border;
                 background: linear-gradient(to bottom, $color-gray-border 0%, $color-gray-border 48%, $color-white 100%);
@@ -35,6 +53,17 @@
     .sidebar {
         &__inner {
             padding: 40px;
+            &:after {
+                background: $color-gray-border;
+                background: linear-gradient(to bottom, $color-gray-border 0%, $color-gray-border 48%, $color-white 100%);
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 540px;
+                top: 30px;
+                right: -10px;
+                bottom: 0;
+            }
         }
     }
 }
