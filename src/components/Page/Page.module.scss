@@ -24,7 +24,7 @@
 
 }
 
-@include breakpoint-sm {
+@include breakpoint-md {
   .page {
     &__inner {
       padding: 30px 20px;
@@ -34,7 +34,7 @@
 
 }
 
-@include breakpoint-md {
+@include breakpoint-lg {
   .page {
     &__inner {
       padding: 40px 35px;
