@@ -2,6 +2,11 @@
 @import '../../../assets/scss/mixins';
 
 .author {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__photo {
     display: inline-block;
     margin-bottom: 0;
@@ -29,8 +34,10 @@
 
   &__subtitle {
     color: $color-gray;
+    font-size: 14px;
+    text-align: center;
     @include line-height(1);
-    @include margin-bottom(1)
+    @include margin-bottom(1);
   }
 
 }

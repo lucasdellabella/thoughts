@@ -20,7 +20,7 @@ module.exports = {
   author: {
     name: 'Lucas Della Bella',
     photo: '/photo.jpg',
-    bio: '???',
+    bio: 'a blog where any effort I put towards building ethos is torn from me by my overuse of emoji',
     contacts: {
       github: 'lucasdellabella',
       youtube: 'channel/UCRWhLAnoDR7H-bK874mf_dA',

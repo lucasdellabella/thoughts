@@ -2,5 +2,17 @@
 @import '../../assets/scss/mixins';
 
 .layout {
-    lost-center: $layout-width;
+    display: grid;
+}
+
+@include breakpoint-sm {
+    .layout {
+        grid-template-columns: 5fr 7fr;
+    }
+}
+
+@include breakpoint-md {
+    .layout {
+        grid-template-columns: 1fr 2fr;
+    }
 }
