@@ -34,6 +34,7 @@
     .sidebar {
         &__inner {
             padding: 30px 20px 0;
+            flex: 0 1 28%;
             &:after {
                 background: $color-gray-border;
                 background: linear-gradient(to bottom, $color-gray-border 0%, $color-gray-border 48%, $color-white 100%);
@@ -53,6 +54,7 @@
     .sidebar {
         &__inner {
             padding: 40px;
+            flex: 0 1 33%;
             &:after {
                 background: $color-gray-border;
                 background: linear-gradient(to bottom, $color-gray-border 0%, $color-gray-border 48%, $color-white 100%);

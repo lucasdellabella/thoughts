@@ -2,17 +2,11 @@
 @import '../../assets/scss/mixins';
 
 .layout {
-    display: grid;
+    display: flex;
 }
 
-@include breakpoint-md {
+@media screen and (max-width: 959px) {
     .layout {
-        grid-template-columns: 5fr 7fr;
-    }
-}
-
-@include breakpoint-lg {
-    .layout {
-        grid-template-columns: 1fr 2fr;
+        flex-direction: column;
     }
 }

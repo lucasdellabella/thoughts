@@ -2,6 +2,7 @@
 @import '../../assets/scss/mixins';
 
 .feed {
+
   &__item {
     @include margin-bottom(1.25);
 
@@ -78,4 +79,16 @@
 
   }
 
+}
+
+@include breakpoint-md {
+    .feed {
+        flex: 0 1 72%;
+    }
+}
+
+@include breakpoint-lg {
+    .feed {
+        flex: 0 1 67%;
+    }
 }
