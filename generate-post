@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+import sys
+import os
+import argparse
+import re
+from datetime import datetime
+
+def now_in_iso():
+    return str(datetime.now())[:-3].replace(' ', 'T') + 'Z'
+
+def build_tags(tag_string):
+    tags = tag_string.split(',')
+    return reduce(lambda a, b: a + '\n  - "{}"'.format(b), tags, '')
+
+def remove_non_alphanumeric_space(s):
+    return re.sub('[^0-9a-zA-Z ]+', '', s)
+
+def space_to_hyphen(s):
+    return s.replace(' ', '-')
+
+# Generates posts based on commandline args
+def main():
+
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('-t', '--title', action="store", dest="title", help='the name of your post')
+    parser.add_argument('-d', '--description', action="store", dest="description", help='the description for your post')
+    parser.add_argument('-c', '--category', action="store", dest="category", help='the category of your post')
+    parser.add_argument('-g', '--tags', action="store", dest="tags", help='a comma seperated list of relevant tags')
+
+    args = parser.parse_args()
+
+    date = str(datetime.today().date())
+    kebabified_title = space_to_hyphen(remove_non_alphanumeric_space(args.title))
+    filename = '{}---{}.md'.format(date, kebabified_title)
+
+    template = open("post-template.yaml", 'r')
+    template_contents = template.read()
+    file_to_write = template_contents.format(
+        args.title,
+        now_in_iso(),
+        kebabified_title.lower(),
+        args.category,
+        build_tags(args.tags),
+        args.description
+    )
+
+    f = open("content/posts/{}".format(filename), "w+")
+    f.write(file_to_write)
+    f.close()
+
+    #file_to_write = 
+    
+
+if __name__ == '__main__':
+    main()
