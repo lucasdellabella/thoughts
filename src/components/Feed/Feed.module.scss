@@ -80,15 +80,3 @@
   }
 
 }
-
-@include breakpoint-md {
-    .feed {
-        flex: 0 1 72%;
-    }
-}
-
-@include breakpoint-lg {
-    .feed {
-        flex: 0 1 67%;
-    }
-}

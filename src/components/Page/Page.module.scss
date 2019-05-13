@@ -26,10 +26,17 @@
 
 @include breakpoint-md {
   .page {
+    flex: 0 1 72%;
     &__inner {
       padding: 40px 35px;
     }
 
   }
 
+}
+
+@include breakpoint-lg {
+    .page {
+        flex: 0 1 67%;
+    }
 }
