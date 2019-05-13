@@ -10,7 +10,9 @@ const Page = ({ title, children }: Props) => {
   const pageRef = useRef();
 
   useEffect(() => {
-    pageRef.current.scrollIntoView();
+    // FIXME: I'm not sure if I want this scroll into view behavior when a page is opened.
+    //   Doesn't the page just jump? Is this the bug that stops the page from loading like normal?
+    // pageRef.current.scrollIntoView();
   });
 
   return (
